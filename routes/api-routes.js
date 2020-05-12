@@ -50,4 +50,15 @@ module.exports = function(app) {
       });
     }
   });
+
+  app.post("/api/profile", function(req, res) {
+    db.Profile.create(req.body).then(function(dbProfile) {
+      console.log(dbProfile); 
+      res.json(dbProfile); 
+    });
+  });
+
+
+
+
 };

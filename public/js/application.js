@@ -1,26 +1,27 @@
 $("#submit").on("click", function(event) {
     event.preventDefault();
     var id = "id" + Math.random().toString(16).slice(5);
-    // make a newUser obj
-    var newUser = {
+    // make a newProfile obj
+    var newProfile = {
       User_ID: id,
-      First_Name: $("#firstName").val().trim(),
-      Last_Name: $("#lastName").val().trim(),
-      City: $("#city").val().trim(),
-      Zip_Code: $("#zipCode").val().trim(),
-      Skill_1: $("#skill_1").val().trim(),
-      Skill_2: $("#skill_2").val().trim(),
-      Contact: $("#bio").val().trim()
+      First_Name: $("#firstname").val(),
+      Last_Name: $("#lastname").val(),
+      City: $("#city").val(),
+      Zip_Code: $("#zipCode").val(),
+      Skill_1: $("#skill_1 option:selected").val(),
+      Skill_2: $("#skill_2 option:selected").val(),
+      Bio: $("#bio").val()
     };
+
+    console.log(newProfile);
   
     // send an AJAX POST-request with jQuery
-    $.post("/api/user/new", newUser)  
+    $.post("/api/profile", newProfile)  
       // on success, run this callback
       .then(function(data) {
         // log the data we found
         console.log(data);
-        // tell the user we're adding a character with an alert window
-        alert("Adding user...");
+        alert("Adding profile...");
       });
     // empty each input box by replacing the value with an empty string
     $("#firstName").val("");
