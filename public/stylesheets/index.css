@@ -23,7 +23,23 @@ body {
   background-repeat:no-repeat;
   background-size:cover;
   background-position: center center;
+  animation-name: light;
+  animation-duration: 5s;
+  animation-timing-function:ease-out;
 }
+
+@keyframes light {
+  0% {
+  filter: brightness(50%);
+}
+60% {
+  filter: brightness(75%);
+}
+100% {
+  filter: brightness(100%);
+}
+}
+
 .hero-content{
   position: relative;
   font-family: "Monserrat", sans-serif;

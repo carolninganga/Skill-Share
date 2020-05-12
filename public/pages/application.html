@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Skill Share</title>
+​
+    <style>
+        .flex-description { flex: 0 0 100%;}
+​
+        .d-flex.flex-wrap label {
+        margin-top: 5px;
+        margin-left: 20px;
+        margin-right: 20px;
+        flex: 0 0 20%;
+        }
+​
+        .radio-column .form-check-label,
+        input[type="radio"].form-check-input {
+        left: 35px;
+        padding-left: 20px;
+        }
+        select:focus {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+​
+        textarea:focus {
+            outline: none !important;
+            box-shadow: none !important;           
+        }
+    </style>
+</head>
+<body>
+​
+​
+​
+<div class="container">
+​
+<h3 class="text-center mt-3">Join Us and Grow Your Skills Today</h3>
+<form id="survey-form">
+    <div class="row">
+      <div class="form-group col">
+        <label id="name-label" for="name">First Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your first name" required />
+      </div>
+      <div class="form-group col">
+        <label id="name-label" for="name">Last Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your last name" required />
+      </div>
+​
+    </div>
+    <div class="row">
+      <div class="form-group col">
+        <label id="number-label" for="number">Phone</label>
+        <input type="tel" name="tel" id="number" class="form-control" placeholder="Enter your phone number" />
+      </div>
+​
+​
+      <div class="form-group col">
+        <label id="email-label" for="email">Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
+      </div>
+​
+​
+    </div>
+​
+    <div class="row">
+      <div class="form-group col">
+        <p>Which skill do you want to grow?</p>
+        <select id="dropdown" name="role" class="form-control" required>
+          <option disabled selected value>Select an option</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="Node.js">Node.js</option>
+          <option value="Project Management">Project Management</option>
+          <option value="SQL">SQL</option>
+          <option value="Python">Python</option>
+          <option value="Basketball">Basketball</option>
+        </select>
+      </div>
+      <div class="form-group col">
+        <p>
+          Which skill do you want to share?
+        </p>
+        <select id="most-like" name="mostLike" class="form-control" required>
+          <option disabled selected value>Select an option</option>
+          <option value="Piano">Piano</option>
+          <option value="Excel">Excel</option>
+          <option value="Tableau">Tableau</option>
+          <option value="Aerobic Dance">Aerobic Dance</option> 
+        </select>
+      </div>
+    </div>
+​
+​
+    <div class="form-group">
+      <p>Bio</p>
+      <textarea id="comments" class="input-textarea form-control" name="comment" placeholder="Tell us more about you"></textarea>
+    </div>
+​
+    <div class="form-group center">
+      <button type="submit" id="submit" class="btn btn-outline-dark">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+</body>
+</html>
