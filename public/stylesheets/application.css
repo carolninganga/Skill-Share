@@ -1,0 +1,23 @@
+.flex-description { flex: 0 0 100%;}
+​
+.d-flex.flex-wrap label {
+margin-top: 5px;
+margin-left: 20px;
+margin-right: 20px;
+        flex: 0 0 20%;
+}
+​
+.radio-column .form-check-label,
+input[type="radio"].form-check-input {
+left: 35px;
+padding-left: 20px;
+}
+select:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+​
+textarea:focus {
+    outline: none !important;
+    box-shadow: none !important;         
+}

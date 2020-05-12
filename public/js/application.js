@@ -1,8 +1,36 @@
-$(document).ready(function() {
-  // This file just does a GET request to figure out which user is logged in
-  // and updates the HTML on the page
-  $.get("/api/user_data").then(function(data) {
-    $(".member-name").text(data.email);
+$("#submit").on("click", function(event) {
+    event.preventDefault();
+    var id = "id" + Math.random().toString(16).slice(5);
+    // make a newProfile obj
+    var newProfile = {
+      User_ID: id,
+      First_Name: $("#firstname").val(),
+      Last_Name: $("#lastname").val(),
+      City: $("#city").val(),
+      Zip_Code: $("#zipCode").val(),
+      Skill_1: $("#skill_1 option:selected").val(),
+      Skill_2: $("#skill_2 option:selected").val(),
+      Bio: $("#bio").val()
+    };
+
+    console.log(newProfile);
+  
+    // send an AJAX POST-request with jQuery
+    $.post("/api/profile", newProfile)  
+      // on success, run this callback
+      .then(function(data) {
+        // log the data we found
+        console.log(data);
+        alert("Adding profile...");
+      });
+    // empty each input box by replacing the value with an empty string
+    $("#firstName").val("");
+    $("#lastName").val("");
+    $("#city").val("");
+    $("#zipCode").val("");
+    $("#skill_1").val("");
+    $("#skill_2").val("");
+    $("#bio").val("");
   });
 
 
@@ -25,5 +53,3 @@ $(document).ready(function() {
     }
     $("#well-section").prepend("<tr><th>First Name</th><th>Last Name</th><th>City</th><th>Zip Code</th><th>Skill One</th><th>Skill Two</th><th>Bio</th></tr>");
   });
-
-});
