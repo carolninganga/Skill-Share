@@ -48,24 +48,24 @@
     <div class="row">
       <div class="form-group col">
         <label id="name-label" for="name">First Name</label>
-        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your first name" required />
+        <input type="text" name="name" id="firstname" class="form-control" placeholder="Enter your first name" required />
       </div>
       <div class="form-group col">
         <label id="name-label" for="name">Last Name</label>
-        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your last name" required />
+        <input type="text" name="name" id="lastname" class="form-control" placeholder="Enter your last name" required />
       </div>
 ​
     </div>
     <div class="row">
       <div class="form-group col">
-        <label id="number-label" for="number">Phone</label>
-        <input type="tel" name="tel" id="number" class="form-control" placeholder="Enter your phone number" />
+        <label id="city-label" for="city">City</label>
+        <input type="text" name="city" id="city" class="form-control" placeholder="Enter Your City Location" />
       </div>
 ​
 ​
       <div class="form-group col">
-        <label id="email-label" for="email">Email</label>
-        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
+        <label id="zipCode-label" for="email">Zip Code</label>
+        <input type="text" name="zipCode" id="zipCode" class="form-control" placeholder="Enter your Zip Code" required /> 
       </div>
 ​
 ​
@@ -73,8 +73,8 @@
 ​
     <div class="row">
       <div class="form-group col">
-        <p>Which skill do you want to grow?</p>
-        <select id="dropdown" name="role" class="form-control" required>
+        <p>Which skill do you want to share?</p>
+        <select id="skill_1" name="role" class="form-control" required>
           <option disabled selected value>Select an option</option>
           <option value="JavaScript">JavaScript</option>
           <option value="Node.js">Node.js</option>
@@ -86,9 +86,9 @@
       </div>
       <div class="form-group col">
         <p>
-          Which skill do you want to share?
+          Which other skill do you want to share?
         </p>
-        <select id="most-like" name="mostLike" class="form-control" required>
+        <select id="skill_2" name="mostLike" class="form-control" required>
           <option disabled selected value>Select an option</option>
           <option value="Piano">Piano</option>
           <option value="Excel">Excel</option>
@@ -101,7 +101,7 @@
 ​
     <div class="form-group">
       <p>Bio</p>
-      <textarea id="comments" class="input-textarea form-control" name="comment" placeholder="Tell us more about you"></textarea>
+      <textarea id="bio" class="input-textarea form-control" name="comment" placeholder="Tell us more about you"></textarea>
     </div>
 ​
     <div class="form-group center">
@@ -111,5 +111,7 @@
     </div>
   </form>
 </div>
+
+<script src="../js/application.js"></script>
 </body>
 </html>
