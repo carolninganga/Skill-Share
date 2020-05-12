@@ -24,7 +24,7 @@ body {
   background-size:cover;
   background-position: center center;
   animation-name: light;
-  animation-duration: 5s;
+  animation-duration: 4s;
   animation-timing-function:ease-out;
 }
 
@@ -54,7 +54,7 @@ body {
    font-family: 'Lateef', cursive;
    letter-spacing: 3px;
    animation-name: learn;
-   animation-duration: 5s;
+   animation-duration: 4s;
    animation-timing-function:ease-in;
 }
 @keyframes learn {
