@@ -10,14 +10,11 @@ $(document).ready(function() {
     for (var i = 0; i < data.length; i++) {
       var wellSection = $("<div>");
       // add a class to this div: 'well'
-      wellSection.addClass("card mt-3");
-      // add an id to the well to mark which well it is
-      wellSection.attr("style", "width: 18rem;");
-      // append the well to the well section
+      wellSection.addClass("portfolio-container mt-3");
+    
       $("#member_cards").append(wellSection);
-      wellSection.append("<div><h5 class='card-title'>" + data[i].First_Name + " " + data[i].Last_Name + "</h5> <br> </div>");
-      wellSection.append("<ul class=‘list-group list-group-flush’> <li class=‘list-group-item’>" + data[i].City + " " + data[i].Zip_Code + "</li> <li class=‘list-group-item’>" + data[i].Skill_1 + " " + data[i].Skill_2 + "</li> </ul>");
-      wellSection.append("<p class='card-text'>" + data[i].Bio + "</p>") 
+      wellSection.append("<div class='portfolio-card'> <div class='portfolioContent'><h5 class='cardCategory'>" + data[i].City + " " + data[i].Zip_Code + "</h5> <h2 class='portfolioTitle'>" + data[i].First_Name + " " + data[i].Last_Name + "</h2> <p>" + data[i].Bio + " <br> </p> <h5 class='tags'> " + data[i].Skill_1 + "</h5> <h5 class='tags'> " + data[i].Skill_2 + "</h5> </div> </div>");
+   
     }
 });
 })
