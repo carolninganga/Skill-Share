@@ -8,22 +8,17 @@ $(document).ready(function() {
 
   $.get("/api/profile", function(data) {
     for (var i = 0; i < data.length; i++) {
-      var wellSection = $("<tr>");
+      var wellSection = $("<div>");
       // add a class to this div: 'well'
-      wellSection.addClass("well");
+      wellSection.addClass("card mt-3");
       // add an id to the well to mark which well it is
-      wellSection.attr("id", "character-well-" + i);
+      wellSection.attr("style", "width: 18rem;");
       // append the well to the well section
-      $("#well-section").append(wellSection);
-      $("#character-well-" + i).append("<td>" + data[i].First_Name + "</td>");
-      $("#character-well-" + i).append("<td>" + data[i].Last_Name + "</td>");
-      $("#character-well-" + i).append("<td>" + data[i].City + "</td>");
-      $("#character-well-" + i).append("<td>" + data[i].Zip_Code + "</td>");
-      $("#character-well-" + i).append("<td>" + data[i].Skill_1 + "</td>");
-      $("#character-well-" + i).append("<td>" + data[i].Skill_2 + "</td>");
-      $("#character-well-" + i).append("<td>" + data[i].Bio + "</td>");
+      $("#member_cards").append(wellSection);
+      wellSection.append("<div><h5 class='card-title'>" + data[i].First_Name + " " + data[i].Last_Name + "</h5> <br> </div>");
+      wellSection.append("<ul class=‘list-group list-group-flush’> <li class=‘list-group-item’>" + data[i].City + " " + data[i].Zip_Code + "</li> <li class=‘list-group-item’>" + data[i].Skill_1 + " " + data[i].Skill_2 + "</li> </ul>");
+      wellSection.append("<p class='card-text'>" + data[i].Bio + "</p>") 
     }
-    $("#well-section").prepend("<tr><th>First Name</th><th>Last Name</th><th>City</th><th>Zip Code</th><th>Skill One</th><th>Skill Two</th><th>Bio</th></tr>");
-  });
-
 });
+})
+
