@@ -1,5 +1,5 @@
 
-.portfolio-container {
+/* .portfolio-container {
     display: flex;
     justify-content: center;
   }
@@ -16,8 +16,16 @@
     min-width: 200px;
     padding: 20px 20px;
     flex-shrink: 2;
+  } */
+  #member_cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px 30px;
   }
-  
+
+  .portfolio-card {
+    border: 1px solid rgba(111, 197, 231, 0.336);
+  }
   @media only screen and (max-width: 820px) {
     .portfolio-card {
       max-width: 400px;
