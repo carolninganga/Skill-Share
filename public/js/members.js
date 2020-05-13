@@ -7,7 +7,6 @@ $(document).ready(function() {
 
 
   $.get("/api/profile", function(data) {
-    console.log(data[0]);
     for (var i = 0; i < data.length; i++) {
       var wellSection = $("<div>");
       // add a class to this div: 'well'
@@ -18,5 +17,32 @@ $(document).ready(function() {
    
     }
 });
+
+
+function searchFunction() {
+  var input, filter, ul, li, a, ap, i, txtValue, txtValuep;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("member_cards");
+  li = ul.getElementsByClassName("portfolio-container");
+  for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByClassName("tags")[0];
+      ap = li[i].getElementsByClassName("tags")[1];
+      txtValue = a.textContent || a.innerText;
+      txtValuep = ap.textContent || ap.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValuep.toUpperCase().indexOf(filter) > -1) {
+          document.getElementsByClassName("portfolio-container")[i].style.display="inline-block";
+      } else {
+          document.getElementsByClassName("portfolio-container")[i].style.display="none";
+      }
+  }
+}
+
+$("#searchBtn").on("click", function (event) {
+  event.preventDefault();
+  searchFunction();
+});
+
+
 })
 
