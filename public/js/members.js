@@ -7,6 +7,7 @@ $(document).ready(function() {
 
 
   $.get("/api/profile", function(data) {
+    console.log(data[0]);
     for (var i = 0; i < data.length; i++) {
       var wellSection = $("<div>");
       // add a class to this div: 'well'
