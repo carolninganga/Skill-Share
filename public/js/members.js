@@ -20,17 +20,17 @@ $(document).ready(function() {
 
 
 function searchFunction() {
-  var input, filter, ul, li, a, ap, i, txtValue, txtValuep;
+  var input, filter, ul, li, skill_a, skill_b, i, txtValue_a, txtValue_b;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   ul = document.getElementById("member_cards");
   li = ul.getElementsByClassName("portfolio-container");
   for (i = 0; i < li.length; i++) {
-      a = li[i].getElementsByClassName("tags")[0];
-      ap = li[i].getElementsByClassName("tags")[1];
-      txtValue = a.textContent || a.innerText;
-      txtValuep = ap.textContent || ap.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValuep.toUpperCase().indexOf(filter) > -1) {
+      skill_a = li[i].getElementsByClassName("tags")[0];
+      skill_b = li[i].getElementsByClassName("tags")[1];
+      txtValue_a = skill_a.textContent || skill_a.innerText;
+      txtValue_b = skill_b.textContent || skill_b.innerText;
+      if (txtValue_a.toUpperCase().indexOf(filter) > -1 || txtValue_b.toUpperCase().indexOf(filter) > -1) {
           document.getElementsByClassName("portfolio-container")[i].style.display="inline-block";
       } else {
           document.getElementsByClassName("portfolio-container")[i].style.display="none";
@@ -43,6 +43,20 @@ $("#searchBtn").on("click", function (event) {
   searchFunction();
 });
 
-
+$('#myInput').on('keyup',function(e){
+  let zipValue = e.target.value;
+  var ul, li, zip, i, txtValue_zip;
+  ul = document.getElementById("member_cards");
+  li = ul.getElementsByClassName("portfolio-container");
+  for (i = 0; i < li.length; i++) {
+    zip = li[i].getElementsByClassName("cardCategory")[0];
+    txtValue_zip = zip.textContent || zip.innerText;
+      if (txtValue_zip.toUpperCase().indexOf(zipValue) > -1) {
+        document.getElementsByClassName("portfolio-container")[i].style.display="inline-block";
+    } else {
+        document.getElementsByClassName("portfolio-container")[i].style.display="none";
+    }
+}
+  })
 })
 
