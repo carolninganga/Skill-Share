@@ -13,6 +13,10 @@ $("#submit").on("click", function(event) {
       Bio: $("#bio").val()
     };
 
+    function myFunction() {
+      location.replace("/members")
+    }
+
     console.log(newProfile);
   
     // send an AJAX POST-request with jQuery
@@ -22,6 +26,7 @@ $("#submit").on("click", function(event) {
         // log the data we found
         console.log(data);
         alert("Adding profile...");
+        myFunction();
       });
     // empty each input box by replacing the value with an empty string
     $("#firstName").val("");
