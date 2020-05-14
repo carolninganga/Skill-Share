@@ -45,7 +45,12 @@ $(document).ready(function () {
 
   $('#myInput').on('keyup', function (e) {
     let zipValue = e.target.value;
-    searchZip(zipValue) && searchSkill(zipValue);
+    if(Number.isInteger(parseInt(zipValue))) {
+       searchZip(zipValue);
+    } else {
+      searchSkill(zipValue);
+    }
+    
   })
 
   function searchZip(zipValue) {
