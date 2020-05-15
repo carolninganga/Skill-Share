@@ -9,4 +9,12 @@
     width: 120px;
     margin: -60px auto 0 auto;
   }
-  
+  #hero-img {
+    max-height: 200px;
+    overflow: hidden;
+  }
+  .card-img-top {
+    display: block;
+    max-width: 100%;
+    height: auto !important;
+  }
