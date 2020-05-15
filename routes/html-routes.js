@@ -25,6 +25,13 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/pages/application.html"));
   });
 
+  app.get("/detail", function(req, res) {
+    // if (req.user) {
+    //   res.redirect("/members");
+    // }
+    res.sendFile(path.join(__dirname, "../public/pages/profile-detail.html"));
+  });
+
   app.get("/login", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {

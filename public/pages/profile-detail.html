@@ -7,9 +7,52 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
    crossorigin=""/>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
    <link rel="stylesheet" href="../stylesheets/profile-detail.css">
+
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="/logout"> 
+          Logout
+        </a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/application">Profile</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li> -->
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input id="myInput" class="form-control mr-sm-2" type="search" placeholder="Search Skills..." aria-label="Search">
+            <button id="searchBtn" class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+ 
+      <img class="card-img-top" src="https://source.unsplash.com/1600x900/?nature,flowers" alt="" />
+      <div class="container">
+        <div class="text-center">
+          <img class="img-avatar rounded-circle" src="https://www.gravatar.com/avatar?d=mp" />
+          <h1>Display Name</h1>
+          <p class="lead">Job Title</p>
+        </div>
+        <ul class="list-unstyled text-muted">
+          <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Location, Country</li>
+          <li><i class="fas fa-link" aria-hidden="true"></i> <a href="#">example.com</a></li>
+          <li><i class="far fa-calendar-alt" aria-hidden="true"></i> Joined a year ago</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
     <div id="mapid"></div>
 
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
