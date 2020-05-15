@@ -32,9 +32,4 @@ var polygon = L.polygon([
 ]).addTo(mymap);
     });
 
-
-
-
-
-
 // 40.8075° N, 73.9626° W
