@@ -1,6 +1,8 @@
 #mapid { 
     height: 400px; 
-    width: 400px;
+    /* width: 400px; */
+    margin: 0 auto;
+    width: 70%;
 }
 .img-avatar {
     height: 120px;
