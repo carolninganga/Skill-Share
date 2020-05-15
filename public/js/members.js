@@ -14,7 +14,7 @@ $(document).ready(function () {
       wellSection.addClass("portfolio-container");
 
       $("#member_cards").append(wellSection);
-      wellSection.append("<div class='portfolio-card'> <div class='portfolioContent'><img src='https://api.adorable.io/avatars/100/abott@adorable.png'><h5 class='cardCategory'>" + data[i].City + " " + data[i].Zip_Code + " </h5> <h2 class='portfolioTitle'>" + data[i].First_Name + " " + data[i].Last_Name + "</h2> <p>" + data[i].Bio + " <br> </p> <h5 class='tags'> " + data[i].Skill_1 + "</h5> <h5 class='tags'> " + data[i].Skill_2 + "</h5> </div> </div>");
+      wellSection.append("<div class='portfolio-card'> <div class='portfolioContent'><img src='https://api.adorable.io/avatars/100/abott@adorable.png'> <a href='/detail'>read more</a> <h5 class='cardCategory'>" + data[i].City + " " + data[i].Zip_Code + " </h5> <h2 class='portfolioTitle'>" + data[i].First_Name + " " + data[i].Last_Name + "</h2> <p>" + data[i].Bio + " <br> </p> <h5 class='tags'> " + data[i].Skill_1 + "</h5> <h5 class='tags'> " + data[i].Skill_2 + "</h5> </div> </div>");
 
     }
   });
