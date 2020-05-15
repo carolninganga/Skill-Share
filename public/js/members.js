@@ -15,7 +15,7 @@ $(document).ready(function () {
       wellSection.addClass("portfolio-container");
 
       $("#member_cards").append(wellSection);
-      wellSection.append(`<div class='portfolio-card'> <div class='portfolioContent'><img class='rounded-circle avatarImg' src='https://api.adorable.io/avatars/100/${avatar}'><h2 class='portfolioTitle'>${data[i].First_Name} ${data[i].Last_Name}</h2><p class='cardCategory'> ${data[i].City} ${data[i].Zip_Code} </p><h5 class='tags'> ${data[i].Skill_1}</h5> <h5 class='tags'>${data[i].Skill_2}</h5><a class='btn btn-secondary btn-lg btn-block' href='/detail'>Read More</a></div></div>`);
+      wellSection.append(`<div class='portfolio-card'> <div class='portfolioContent'><img class='rounded-circle avatarImg' src='https://api.adorable.io/avatars/100/${avatar}'><h2 class='portfolioTitle'>${data[i].First_Name} ${data[i].Last_Name}</h2><p class='cardCategory'> ${data[i].City} ${data[i].Zip_Code} </p><h5 class='tags'> ${data[i].Skill_1}</h5> <h5 class='tags'>${data[i].Skill_2}</h5><a class='btn btn-secondary btn-lg btn-block' href='/detail/${data[i].User_ID}'>Read More</a></div></div>`);
 
     }
   });

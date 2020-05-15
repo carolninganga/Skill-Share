@@ -32,6 +32,14 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/pages/profile-detail.html"));
   });
 
+
+  
+  app.get("/detail/${data[i].User_ID}", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/pages/profile-detail.html"));
+  })
+
+
+
   app.get("/login", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {

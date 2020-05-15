@@ -65,4 +65,17 @@ module.exports = function(app) {
         res.json(data);
         })
   });
+
+
+  app.get("/api/profile/:id", function(req, res) {
+    db.Profile.findOne({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(data => {
+        console.log(data)
+        res.json(data);
+        })
+  });
 };

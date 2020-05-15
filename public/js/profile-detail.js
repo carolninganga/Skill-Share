@@ -1,5 +1,5 @@
 // http://www.mapquestapi.com/geocoding/v1/address?key=KEY&location=Washington,DC
-var apiKey = "HbAqyAns3LoXacb0KaH60uoNyxmampoE"
+// var apiKey = "HbAqyAns3LoXacb0KaH60uoNyxmampoE"
 var zipcode = "11416"
 
 fetch(`http://www.mapquestapi.com/geocoding/v1/address?key=${apiKey}&location=${zipcode}`)
@@ -33,3 +33,24 @@ var polygon = L.polygon([
     });
 
 // 40.8075° N, 73.9626° W
+
+$(document).ready(function () {
+    $.get("/api/profile", function (data) {
+      for (var i = 0; i < data.length; i++) {
+        var wellSection = $("<div>");
+        var avatar = i;
+        wellSection.addClass("detailContainer");
+        $(".card-img-top").append(wellSection);
+        wellSection.append(`<div class="text-center">
+        <img class="img-avatar rounded-circle" src="https://api.adorable.io/avatars/100/${avatar}" />
+        <h1>${data[i].First_Name} ${data[i].Last_Name}</h1>
+        <p class="lead">${data[i].City} ${data[i].Zip_Code}</p>
+      </div> 
+      <ul class="list-unstyled text-muted">
+      <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> ${data[i].Skill_1}</li>
+      <li><i class="fas fa-link" aria-hidden="true"></i> <a href="#">${data[i].Skill_2}</a></li>
+    </ul> 
+      <p>${data[i].Bio}</p>`);
+      }
+    });
+});
