@@ -26,6 +26,13 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/pages/application.html"));
   });
 
+  app.get("/game", function(req, res) {
+    // if (req.user) {
+    //   res.redirect("/members");
+    // }
+    res.sendFile(path.join(__dirname, "../public/pages/game.html"));
+  });
+
    app.get("/detail", function(req, res) {
     // if (req.user) {
     //   res.redirect("/members");
