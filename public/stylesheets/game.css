@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+  }
+  .avatarImg {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 15px solid #fff;
+  }
+  #member_cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px 30px;
+    margin: 10px;
+  }
+  @media only screen and (max-width: 820px) {
+    .portfolio-card {
+      max-width: 400px;
+    }
+  }
+  .portfolioContent {
+    width: 350px;
+    height: 350px;
+    padding: 10px 10px;
+    text-align: center;
+    border: 3px solid #6c757d;
+    font-size: 1.5em;
+    border-radius: 25px 50px;
+  }
+  
+  .portfolioContent p {
+    font-size: 0.5em;
+    margin: 10px;
+  }
+  .middle {
+    opacity: 1;
+    position: absolute;
+    background-color: rgb(24, 104, 223);
+    color: white;
+    left: 41%;
+    top: 46%;
+    width: 75px;
+    text-align: center;
+    display: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .tags {
+    background-color: #f7af9d;
+    display: inline-block;
+    padding: 5px;
+    color: white;
+    border-radius: 3px;
+  }
+  .cardCategory {
+    text-transform: uppercase;
+    color: rgb(122, 139, 164);
+  }
+  
+  .tages {
+    background-color: rgb(114, 179, 194);
+    display: inline-block;
+    padding: 5px;
+    color: white;
+    border-radius: 3px;
+  }
+  
+  .btn-block:hover {
+    background-color: #fff;
+    color:#6c757d;
+    border: 3px solid #6c757d;
+  }
+  
