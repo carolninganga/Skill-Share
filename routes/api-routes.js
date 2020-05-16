@@ -67,6 +67,15 @@ module.exports = function(app) {
         })
   });
 
+  app.get("/api/user", function(req, res) {
+    if(req.user) {
+      return res.json(req.user)
+    } else {
+      res.json(new Error("no such user"));
+    }
+        
+  });
+
 
   app.get("/api/profile/:id", function(req, res) {
     db.Profile.findOne({
