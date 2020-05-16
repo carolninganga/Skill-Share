@@ -15,7 +15,7 @@ $(document).ready(function () {
       wellSection.addClass("portfolio-container");
 
       $("#member_cards").append(wellSection);
-      wellSection.append(`<div class='portfolio-card'> <div class='portfolioContent'><img class='rounded-circle avatarImg' src='https://api.adorable.io/avatars/100/${avatar}'><h2 class='portfolioTitle'>${data[i].First_Name} ${data[i].Last_Name}</h2><p class='cardCategory'> ${data[i].City} ${data[i].Zip_Code} </p><h5 class='tags'> ${data[i].Skill_1}</h5> <h5 class='tages'>${data[i].Skill_2}</h5><a class='btn btn-secondary btn-lg btn-block' href='/detail'>Read More</a></div></div>`);
+      wellSection.append(`<div class='portfolio-card'> <div class='portfolioContent'><img class='rounded-circle avatarImg' src='https://api.adorable.io/avatars/100/${avatar}'><h2 class='portfolioTitle'>${data[i].First_Name} ${data[i].Last_Name}</h2><p class='cardCategory'> ${data[i].City} ${data[i].Zip_Code} </p><h5 class='tags'> ${data[i].Skill_1}</h5> <h5 class='tages'>${data[i].Skill_2}</h5><a id= 'readProfile' class='btn btn-secondary btn-lg btn-block' href='/members/${data[i].User_ID}'>Read More</a></div></div>`);
 
     }
   });
@@ -72,7 +72,25 @@ $(document).ready(function () {
     }
   });
 
+  // $("#readProfile").on("click", function (event) {
+  //   console.log(event.target.value)
 
+  //   $.ajax({
+  //     url: "api/profile/"+ User_ID, 
+  //     type: "GET",
+  //     dataType: "application/json",
+  //     data: {some_query_var : JSON.stringify(data)},
+  //     contentType: "application/json",
+  //     success: function(result){
+  //         console.log("***********************++++++++++++++*************************");
+  //         console.log(JSON.stringify(result));                                                       
+  //         //assert.equal(result !=null,true,"Response should not be null");               
+  //         //assert.equal(result[0].error,"Whitebaord ID NOT FOUND","InValid Whiteboard ID");
+  //         assert.equal(1,1); 
+  //         done();
+  //     }
+  // });
 
-})
+  // });
+});
 
