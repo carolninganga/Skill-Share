@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Tanya#007",
-    "database": "passport_demo",
+    "password": "Diallo123_",
+    "database": "skillshare",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
