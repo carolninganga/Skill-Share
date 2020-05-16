@@ -26,9 +26,11 @@
   height: 350px;
   padding: 10px 10px;
   text-align: center;
-  border: 1px solid rgba(111, 197, 231, 0.336);
+  border: 3px solid #6c757d;
   font-size: 1.5em;
+  border-radius: 25px 50px;
 }
+
 .portfolioContent p {
   font-size: 0.5em;
   margin: 10px;
@@ -64,4 +66,10 @@
   padding: 5px;
   color: white;
   border-radius: 3px;
+}
+
+.btn-block:hover {
+  background-color: #fff;
+  color:#6c757d;
+  border: 3px solid #6c757d;
 }
