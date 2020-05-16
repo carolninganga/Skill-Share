@@ -40,6 +40,13 @@ module.exports = function(app) {
      res.sendFile(path.join(__dirname, "../public/pages/profile-detail.html"));
   });
 
+  app.get("/members/:id", function(req, res) {
+    // if (req.user) {
+    //   res.redirect("/members");
+    // }
+     res.sendFile(path.join(__dirname, "../public/pages/profile-detail.html"));
+  });
+
 
   
   // app.get(`detail/${data.User_ID}`, function(req, res) {
