@@ -80,8 +80,8 @@ module.exports = function(app) {
   app.get("/api/profile/:id", function(req, res) {
     db.Profile.findOne({
       where: {
-        id: req.params.id
-      }
+        User_ID: req.params.id
+     }
     })
       .then(data => {
         console.log(data)
