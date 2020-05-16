@@ -77,3 +77,16 @@
   .hide {
       display: none;
   }
+
+  .animate {
+    position: relative;
+    animation-name: showCard;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+  
+  @keyframes showCard {
+    0%   {left:-200px; top:20px;}
+    100%  {left:70%; top:20px;}  
+  }
