@@ -20,31 +20,6 @@ $(document).ready(function () {
     }
   });
 
-
-  function searchFunction() {
-    var input, filter, ul, li, skill_a, skill_b, i, txtValue_a, txtValue_b;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("member_cards");
-    li = ul.getElementsByClassName("portfolio-container");
-    for (i = 0; i < li.length; i++) {
-      skill_a = li[i].getElementsByClassName("tags")[0];
-      skill_b = li[i].getElementsByClassName("tags")[1];
-      txtValue_a = skill_a.textContent || skill_a.innerText;
-      txtValue_b = skill_b.textContent || skill_b.innerText;
-      if (txtValue_a.toUpperCase().indexOf(filter) > -1 || txtValue_b.toUpperCase().indexOf(filter) > -1) {
-        document.getElementsByClassName("portfolio-container")[i].style.display = "inline-block";
-      } else {
-        document.getElementsByClassName("portfolio-container")[i].style.display = "none";
-      }
-    }
-  }
-
-  $("#searchBtn").on("click", function (event) {
-    event.preventDefault();
-    searchFunction();
-  });
-
   $('#myInput').on('keyup', function (e) {
     let zipValue = e.target.value;
     if(Number.isInteger(parseInt(zipValue))) {
@@ -71,15 +46,13 @@ $(document).ready(function () {
   }
 
   function searchSkill(zipValue) {
-
-
     var input, filter, ul, li, skill_a, skill_b, i, txtValue_a, txtValue_b;
     filter = zipValue.toUpperCase();
     ul = document.getElementById("member_cards");
     li = ul.getElementsByClassName("portfolio-container");
     for (i = 0; i < li.length; i++) {
       skill_a = li[i].getElementsByClassName("tags")[0];
-      skill_b = li[i].getElementsByClassName("tags")[1];
+      skill_b = li[i].getElementsByClassName("tages")[0];
       txtValue_a = skill_a.textContent || skill_a.innerText;
       txtValue_b = skill_b.textContent || skill_b.innerText;
       if (txtValue_a.toUpperCase().indexOf(filter) > -1 || txtValue_b.toUpperCase().indexOf(filter) > -1) {
@@ -89,6 +62,15 @@ $(document).ready(function () {
       }
     }  
   }
+
+  $("#searchBtn").on("click", function (event) {
+    let zipValue = event.target.value;
+    if(Number.isInteger(parseInt(zipValue))) {
+       searchZip(zipValue);
+    } else {
+      searchSkill(zipValue);
+    }
+  });
 
 
 
