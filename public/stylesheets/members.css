@@ -36,7 +36,7 @@
   font-size: 0.5em;
   margin: 10px;
 }
-.middle {
+.middle { 
   opacity: 1;
   position: absolute;
   background-color: rgb(24, 104, 223);
@@ -85,5 +85,6 @@
  box-shadow: inset 0 0 100px hsla(0,0%,0%,.3);
  width:100%;
  height: 100%;
+ min-height: 100vh;
 }
 
