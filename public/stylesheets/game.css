@@ -73,8 +73,8 @@
   }
   
   @keyframes showCard {
-    0%   {left:-200px; top:20px;}
-    100%  {left:70%; top:20px;}  
+    0%   {left:-500px; top:100px;}
+    100%  {left:15%; top:100px;}  
   }
 
   .background { 
@@ -91,7 +91,7 @@
   }
   
   .btn-block {
-    background-color: #000;
+    background-color: #212529;
     color: #fff;
     width: 60%;
     margin: 0 auto;
@@ -108,5 +108,11 @@
     box-shadow: 30px 0px 40px rgba(0,0,0,0.1),
     -30px 0px 40px rgba(0,0,0,0.1);
   }
-   
-   
+  
+ #randomBtn {
+   position: absolute;  
+   left: 40%;
+   top: 10%;
+ }
+
+ 

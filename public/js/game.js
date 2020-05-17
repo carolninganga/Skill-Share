@@ -23,7 +23,8 @@ function randomCardGenerator() {
         var randomEl = $("[data-id='" + random + "']");
         randomEl[0].removeAttribute("class","hide");
         randomEl[0].setAttribute("class","animate");
-    
+
+        $("#randomBtn").setAttribute("class", "hide");
           
       });
 
