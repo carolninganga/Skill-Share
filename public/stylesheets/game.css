@@ -21,15 +21,6 @@
       max-width: 400px;
     }
   }
-  .portfolioContent {
-    width: 350px;
-    height: 350px;
-    padding: 10px 10px;
-    text-align: center;
-    border: 3px solid #6c757d;
-    font-size: 1.5em;
-    border-radius: 25px 50px;
-  }
   
   .portfolioContent p {
     font-size: 0.5em;
@@ -68,11 +59,6 @@
     border-radius: 3px;
   }
   
-  .btn-block:hover {
-    background-color: #fff;
-    color:#6c757d;
-    border: 3px solid #6c757d;
-  }
   
   .hide {
       display: none;
@@ -90,3 +76,37 @@
     0%   {left:-200px; top:20px;}
     100%  {left:70%; top:20px;}  
   }
+
+  .background { 
+    box-shadow: inset 0 0 100px hsla(0,0%,0%,.3);
+    width:100%;
+    height: 100%;
+    min-height: 100vh;
+   }
+
+
+   .btn-block:hover {
+    background-color: transparent;
+    color:#000;
+  }
+  
+  .btn-block {
+    background-color: #000;
+    color: #fff;
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  .portfolioContent {
+    width: 350px;
+    height: 350px;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 200px 200px;
+    background-color: #fff;
+    box-shadow: 30px 0px 40px rgba(0,0,0,0.1),
+    -30px 0px 40px rgba(0,0,0,0.1);
+  }
+   
+   
