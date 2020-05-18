@@ -26,9 +26,9 @@ $.get("/api/profile/" + id, function (data) {
         accessToken: 'pk.eyJ1Ijoic3RhcmR1c3QxOTEiLCJhIjoiY2thNjMzZzdlMDNtdTJ6bWptaTFqa3Y2MSJ9.VIX2KRmemtC5qDAMyL9Jug'
     }).addTo(mymap);
     
-    var marker = L.marker([40.8075, 73.9626]).addTo(mymap);
+    var marker = L.marker([lat, lng]).addTo(mymap);
     
-    var circle = L.circle([51.508, -0.11], {
+    var circle = L.circle([lat, lng], {
         color: 'red',
         fillColor: '#f03',
         fillOpacity: 0.5,
