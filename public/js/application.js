@@ -14,7 +14,8 @@ $("#submit").on("click", function (event) {
       Zip_Code: $("#zipCode").val(),
       Skill_1: $("#skill_1 option:selected").val(),
       Skill_2: $("#skill_2 option:selected").val(),
-      Bio: $("#bio").val()
+      Bio: $("#bio").val(),
+      Email: sessionStorage.getItem('email')
     };
 
     function myFunction() {

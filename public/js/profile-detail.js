@@ -5,6 +5,7 @@ $.get("/api/profile/" + id, function (data) {
     $(".userName").text(data.First_Name +" "+ data.Last_Name);
     $(".lead").text(data.Skill_1 + " " + data.Skill_2);
     $("#location").text(data.City + " " + data.Zip_Code);
+    $("#contactEmail").text(data.Email);
     $("#bio").text(data.Bio);
 
 

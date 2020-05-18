@@ -31,6 +31,10 @@ module.exports = function(sequelize, DataTypes) {
       Bio: {
         type: DataTypes.STRING,
         allowNull: false
+      },
+      Email: {
+        type: DataTypes.STRING,
+        allowNull: false
       }
     });
     return Profile;
