@@ -29,8 +29,11 @@ $(document).ready(function() {
       password: password
     })
       .then(function() {
+        sessionStorage.setItem('email', email);
         window.location.replace("/members");
         // If there's an error, log the error
+        
+        // console.log(sessionStorage.getItem('email'));
       })
       .catch(function(err) {
         console.log(err);
