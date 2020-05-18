@@ -88,3 +88,13 @@
  min-height: 100vh;
 }
 
+.emailTag {
+  background-color: transparent;
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 6px;
+  padding: 5px;
+  color: #212529;
+  border-radius: 3px;
+}
