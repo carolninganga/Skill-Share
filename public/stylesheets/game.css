@@ -112,7 +112,12 @@
  #randomBtn {
    position: absolute;  
    left: 40%;
-   top: 10%;
+   top: 15%;
+ }
+
+ #randomBtn:focus {
+   outline: none;
+   box-shadow: none;
  }
 
  
