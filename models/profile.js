@@ -4,11 +4,15 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.STRING,
         allowNull: false
       },
-      First_Name: {
+      Name: {
         type: DataTypes.STRING,
         allowNull: false
       },
-      Last_Name: {
+      Email: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      Password: {
         type: DataTypes.STRING,
         allowNull: false
       },   
@@ -29,10 +33,6 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       },   
       Bio: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
-      Email: {
         type: DataTypes.STRING,
         allowNull: false
       }

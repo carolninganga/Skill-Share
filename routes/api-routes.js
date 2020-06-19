@@ -76,7 +76,6 @@ module.exports = function(app) {
         
   });
 
-
   app.get("/api/profile/:id", function(req, res) {
     db.Profile.findOne({
       where: {

@@ -1,5 +1,5 @@
 $("#submit").on("click", function (event) {
-  if ($.trim($("#firstname").val()) === "" || $.trim($("#lastname").val()) === "" || $.trim($("#city").val()) === "" || $.trim($("#zipCode").val()) === "" || $.trim($("#skill_1").val()) === "" || $.trim($("#skill_2").val()) === "" || $.trim($("#bio").val()) === "") {
+  if ($.trim($("#name").val()) === "" || $.trim($("#email").val()) === "" || $.trim($("#password").val()) === "" || $.trim($("#city").val()) === "" || $.trim($("#zipCode").val()) === "" || $.trim($("#skill_1").val()) === "" || $.trim($("#skill_2").val()) === "" || $.trim($("#bio").val()) === "") {
     alert('you did not fill out one of the fields');
     return false;
   } else {
@@ -8,14 +8,15 @@ $("#submit").on("click", function (event) {
     // make a newProfile obj
     var newProfile = {
       User_ID: id,
-      First_Name: $("#firstname").val(),
-      Last_Name: $("#lastname").val(),
+      Name: $("#name").val(),
+      Email: $("#email").val(),
+      Password: $("#password").val(),
       City: $("#city").val(),
       Zip_Code: $("#zipCode").val(),
       Skill_1: $("#skill_1 option:selected").val(),
       Skill_2: $("#skill_2 option:selected").val(),
-      Bio: $("#bio").val(),
-      Email: sessionStorage.getItem('email')
+      Bio: $("#bio").val()
+      //Email: sessionStorage.getItem('email')
     };
 
     function myFunction() {
@@ -34,8 +35,9 @@ $("#submit").on("click", function (event) {
         myFunction();
       });
     // empty each input box by replacing the value with an empty string
-    $("#firstName").val("");
-    $("#lastName").val("");
+    $("name").val("");
+    $("#email").val("");
+    $("#password").val("");
     $("#city").val("");
     $("#zipCode").val("");
     $("#skill_1").val("");

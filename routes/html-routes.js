@@ -20,9 +20,9 @@ module.exports = function(app) {
   });
 
   app.get("/application", function(req, res) {
-    // if (req.user) {
-    //   res.redirect("/members");
-    // }
+    if (req.user) {
+      res.redirect("/members");
+    }
     res.sendFile(path.join(__dirname, "../public/pages/application.html"));
   });
 
